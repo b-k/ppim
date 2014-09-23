@@ -20,7 +20,7 @@ bib:
 	sed -e 's/\\bibitem[^]]*]{\([^}]*\)}/<\/p><p> [<a href="\#\1">\1<\/a>] /g' -e "s/\\newblock//g" \
 		-e 's/\\newblock//g' -e "s/~/ /g" -e"s|\\\\/||g"		\
 		-e 's/\%\([^ \t\n]\)/\1/g'		\
-		-e 's/{\\em \([^}]*\)}/__\1__/g' > $b.html
+		-e 's/{\\em \([^}]*\)}/<em>\1<\/em>/g' > $b.html
 	#cat $b.bbl $b.asc
 	#cp $b.asc ../auto
 

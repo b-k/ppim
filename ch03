@@ -1,6 +1,17 @@
 Chapter(Small area estimation)
 
-Section(Faye-Herriot)
+Section(Fay-Herriot)
+
+The Fay-Herriot model \citep{fay:herriot} is attempts to structure errors in nested
+manner, so the total error in an area is a combination of localized error and the
+error from the containing group.
+
+$$Y_a \sim {\cal N}(\theta_a, \sigma_a)$$
+$$\theta_a \sim {\cal N}(x_a'\beta, \sigma_g)$$
+
+
+If $\sigma_g$ were zero, then this would be a simple linear regression model, where the
+outcome $Y_a = x_a'\beta + \epsilon$, where $\epsilon \sim {\cal N}(0, \sigma_a)$.
 
 Section(Lanjouw)
 
