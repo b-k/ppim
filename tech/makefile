@@ -10,7 +10,15 @@ pdf:
 	pdflatex ppim
 
 html:
-	sed 's/,/<|,|>/g' ../entries/$f.tex  | sed 's/│/,/g' | m4 -P ../tech/htmlify.m4  - | sed -e 's|<ul> *</li>|<ul>|' | ../tech/insert_ps | \
+	sed 's/,/<|,|>/g' ppim.m4.html  | sed 's/│/,/g' | m4 -P htmlify.m4  - | sed -e 's|<ul> *</li>|<ul>|' | insert_ps | \
         sed -e 's/<p><h6>/<h6>/' -e 's|</h6></p>|</h6>|' -e 's|<p></li>|</li>|g'\
         -e '$d' -e 's/``/“/g' -e 's/\\dots/…/g' -e 's/\\%/%/g' -e 's/\\#/#/g' -e 's/---/—/g'\
-            |awk -f ../tech/awk_cut > $f.html
+            |awk -f awk_cut > ~/tmp/ppim/index.html;
+	cp typical.css ~/tmp/ppim/
+
+push:
+	cd ~/tmp/ppim && git commit -a -m "Another update." && git push origin gh-pages
+
+
+comment:
+	sed 's/,/<|,|>/g' ppim.m4.html  | sed 's/│/,/g' | m4 -P htmlify.m4  - | sed -e 's|<ul> *</li>|<ul>|' | insert_ps | 
