@@ -27,6 +27,8 @@ define_blind(Verbatim, <|<pre><code>$*</code></pre>|>)
 define_blind(Block, <|<blockquote><p>$*</blockquote>|>)
 
 
+define_blind(Citet, <|<a href="#$1">$2</a>|>)
+define_blind(Citep, <|(<a href="#$1">$1</a>)|>)
 
 define_blind(Link, <|<a href="$1">m4_shift($*)</a>|>)
 

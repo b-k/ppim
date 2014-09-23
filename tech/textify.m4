@@ -12,6 +12,9 @@ define_blind(sc, <|{\sc $*}|>)
 define_blind(bf, <|{\bf $*}|>)
 define_blind(em, <|{\em $*}|>)
 
+define_blind(Citet, <|\citet{$*}|>)
+define_blind(Citep, <|\citep{$*}|>)
+
 define_blind(TitleDate, <|\titledate{$1}{$2}|>)
 define_blind(TeX, <|$*|>)
 define_blind(HTML, <||>)

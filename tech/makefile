@@ -9,15 +9,23 @@ pdf:
 	pdflatex ppim
 	pdflatex ppim
 
+HTMLout=~/tmp/ppim
+
 html:
-	sed 's/,/<|,|>/g' ppim.m4.html  | sed 's/│/,/g' | m4 -P htmlify.m4  - | sed -e 's|<ul> *</li>|<ul>|' | insert_ps | \
+	for f in ../ch* ; do \
+		sed 's/,/<|,|>/g' $$f  | sed 's/<>/,/g' | m4 -P htmlify.m4  - | sed -e 's|<ul> *</li>|<ul>|' | insert_ps | \
         sed -e 's/<p><h6>/<h6>/' -e 's|</h6></p>|</h6>|' -e 's|<p></li>|</li>|g'\
         -e '$d' -e 's/``/“/g' -e 's/\\dots/…/g' -e 's/\\%/%/g' -e 's/\\#/#/g' -e 's/---/—/g'\
-            |awk -f awk_cut > ~/tmp/ppim/index.html;
-	cp typical.css ~/tmp/ppim/
+            |awk -f awk_cut > `basename $$f xx`.html; \
+	done
+	cd bib&&make
+	echo "<h2>Bibliography</h2>" > xxx
+	cat head.html ch*.html xxx  bib/bibshell.html tail.html > $(HTMLout)/index.html
+	rm xxx
+	cp typical.css $(HTMLout)
 
 push:
-	cd ~/tmp/ppim && git commit -a -m "Another update." && git push origin gh-pages
+	cd $(HTMLout) && git commit -a -m "Another update." && git push origin gh-pages
 
 
 comment:
