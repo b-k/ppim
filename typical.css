@@ -53,7 +53,7 @@ H1,H2,H3,H4,H5,H6/*,P,CENTER,TD,TH,UL,DL,DIV */{
 	background-color: #FFFFDE;
 }
 H1 {
-	text-align: center;
+/*	text-align: center;*/
        font-size: 160%;
 }
 H2 {
