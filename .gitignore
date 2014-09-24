@@ -1,0 +1,5 @@
+*.aux
+*.log
+tech/bib/bibshell.*
+tech/ch*.html
+tech/ch*.tex

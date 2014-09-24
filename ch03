@@ -1,8 +1,18 @@
 Chapter(Small area estimation)
 
+Here we cover modeling techniques for situations where there are subgroups within larger
+groups, and we seek to describe the subgroups in greater detail. Typically there are only
+a few observations on the subgroup.
+
+The techniques here are sometimes described as `borrowing strength' from other
+segments of the group to better describe a given subgroup. This is done in a somewhat
+indirect manner: the error term in the model is described in much more detail than in
+standard statistical models, and is decomposed into (subgroup error) = (group error) +
+(subgroup-idiosyncratic error).
+
 Section(Fay-Herriot)
 
-The Fay-Herriot model \citep{fay:herriot} is attempts to structure errors in nested
+The Fay-Herriot model Citep(fay:herriot) is attempts to structure errors in nested
 manner, so the total error in an area is a combination of localized error and the
 error from the containing group.
 

@@ -24,7 +24,6 @@ define_blind(Block, <|\begin{quote}$*\end{quote}|>)
 define_blind(Verbatim, <|\begin{verbatim}
 $*
 \end{verbatim}|>)
-define_blind(Xref, <|$2 (entry \#$1)|>)
 
 
 define_blind(Pic, <|\begin{figure}[htb]

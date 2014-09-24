@@ -1,5 +1,8 @@
 This is a primer on poverty and inequality measurement.
 
+This view is the source for an HTML and PDF version. Read the HTML version at
+http://b-k.github.io/ppim/ . Get the PDF version when we have more content and a good
+place for it, or use the makefile in the tech directory to build it.
 
 Scope
 =====
@@ -19,8 +22,6 @@ know basic Statistics and Economic theory.
 
 Format
 ======
-
-This will be available as a PDF and as HTML. 
 
 There will be a style guide on how to write the formatting shortly. We will not use
 markdown.
