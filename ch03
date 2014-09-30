@@ -44,7 +44,7 @@ $$(W_v - \mu_v) = \frac{1}{N_v}\sum_{i=1}^{N_v} {w_i(\cdot) - \int_{\forall h} w
 If there are survey weights, the equation can easily be modified accordingly.
 
 Then 
-$$\sqrt{N_v}(\mu_v - W_v} \to {\cal N}(0, \sigma),$$
+$$\sqrt{N_v}(\mu_v - W_v) \to {\cal N}(0, \sigma),$$
 where $\sigma$ is easily calculated.
 
 the authors propose that most non-separable cases can be broken down into continuous
