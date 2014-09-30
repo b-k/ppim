@@ -23,6 +23,57 @@ $$\theta_a \sim {\cal N}(x_a'\beta, \sigma_g)$$
 If $\sigma_g$ were zero, then this would be a simple linear regression model, where the
 outcome $Y_a = x_a'\beta + \epsilon$, where $\epsilon \sim {\cal N}(0, \sigma_a)$.
 
-Section(Lanjouw)
+Section(Elbers, Lanjouw, and Lanjouw)
 
-Here we discuss Citet(elbers:lanjouw<> Elbers and Lanjouw)
+Let $W_v$ be a statistic (a welfare indicator) to be calculated at the local (village)
+level, and $\tilde\mu_v$ the caluclated estimate. Then Citet(elbers:lanjouw<> Elbers,
+Lanjouw, and Lanjouw) break down the error into three parts:
+
+$$W_v-\tilde\mu_v = (W_v-\mu_v) + (\mu_v - \hat\mu_v) + (\hat\mu_v - \tilde\mu_v)  $$
+
+If each of these elements is consistent and well-behaved as $N\to\infty$, their
+sum will be.
+
+
+Paragraph(Idiosyncratic error: $W_v - \mu_v$) For statistics such as means,
+the total deviation from the mean is the average of individual deviations. Let
+$w(\cdot)$ be the single-household welfare calculation (its inputs will be
+discussed below), and $N_v$ the count of households $h$ in a village, then
+
+$$(W_v - \mu_v) = \frac{1}{N_v}\sum_{i=1}^{N_v} {w_i(\cdot) - \int_{\forall h} w(\cdot)}.$$
+If there are survey weights, the equation can easily be modified accordingly.
+
+Then 
+$$\sqrt{N_v}(\mu_v - W_v} \to {\cal N}(0, \sigma),$$
+where $\sigma$ is easily calculated.
+
+the authors propose that most non-separable cases can be broken down into continuous
+functions of means, and the above asymptotic properties apply to those means.
+
+
+Paragraph(Model error: $\mu_v - \hat\mu_v$) The expected welfare estimator is the expected value of some function of 
+a set of inputs, $\hat\mu = E[W|\dots]$. If we have consistent estimates of the
+inputs and $W(\dots)$ is a continuous and differentiable function, then the
+$\hat\mu_v$ is a consistent estimator of $\mu_v$, and $\sqrt{s}(\mu - \hat\mu)$
+is Normally distributed (where $s$ is the number of units used in estimation).
+
+The authors point out that if the $W(\dots)$ function is differentiable, then we
+can use the delta method to convert the estimate of the variance of its inputs to a
+variance of $W$.
+
+Paragraph(Computation error: $\hat\mu_v - \tilde\mu_v$) Because the paper does estimations via
+replication methods, one could get a bad estimate of the true statistic given
+non-representative draws. The authors note that we are doing this exercise because we
+have areas with a small number of observations, so it is not difficult to make enough
+draws to cover the data.  We add that a decade has passed since the paper was written
+and replications are still cheaper.
+
+Subsection(Appropriate measures) To this point, we have a number of criteria
+for a well-behaved system: $w(\cdot)$ should have the separability conditions
+discussed above, and the welfare estimator $\hat\mu = E[W|\dots]$ should be
+a continuous and differentiable function of inputs. The inputs to $W$ should be
+consistently estimated as well.
+
+The authors propose a number of variants of the Fay-Herriot model that fit this
+form.
+
