@@ -79,4 +79,16 @@ form.
 
 Section(Small Area Income and Poverty Estimates (SAIPE)) 
 
-Section(Molina and Rao) See Citet(molina:rao <> Molina and Rao).
+Section(Small area as missing data problem) 
+Consider the case of a complete data set $Y$, where we observe some subset $y_s$,
+but do not observe $y_r = Y-y_s$. We seek the expected value of a statistic $F(Y)\equiv F(y_s, y_r)$. Then
+if we know the distribution of $y_r$, then 
+
+$$E(Y) = \int_{\forall y_r} F(y_s, \nu) d\nu.$$
+
+Citet(molina:rao <> Molina and Rao) propose the case where the data is from a Multivariate
+Normal distribution. If the data $e$ are not from such a distribution, assume a transformation
+$T(\cdot)$ such that $T(e)$ is Normally distributed. Then $E(Y)$ is readily calculated.
+
+
+
