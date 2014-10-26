@@ -18,7 +18,7 @@ Section(Some commands)
 
 Subsection(Sectioning)
 There are Chapter, Section, Subsection, and Paragraph commands. If you need more depth than that
-you're probably trying to hard. I think the Paragraph is sometimes useful for marking a
+you're probably trying too hard. I think the Paragraph is sometimes useful for marking a
 list of ideas within a section.
 
 Subsection(Text decoration et al.)
